@@ -35,8 +35,8 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
+          git config --global user.name "parham-snk"
+          git config --global user.email "psanjanaki@gmail.com"
           git checkout main || git checkout -b main
           git merge master --allow-unrelated-histories -m "Merge master into main for screenshot"
           git add screenshot/screenshot.jpg README.md
