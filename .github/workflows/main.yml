@@ -12,6 +12,9 @@ jobs:
       # مرحله ۱: checkout ریپازیتوری
       - name: Checkout repository
         uses: actions/checkout@v3
+        with : 
+          ref : master 
+          fetch-depth : 0 
 
       # مرحله ۲: نصب Node.js
       - name: Setup Node.js
