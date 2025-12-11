@@ -35,8 +35,10 @@ jobs:
         run: |
           git config --global  user.name "parham-snk"
           git config --global  user.email "psanjanaki@gmail.com"
-          git add ./screenshot/screenshot.jpg
+          git stash push 
           git checkout main 
+          git stash apply
+          git add .
           git commit -m "Update screenshot" || echo "No changes to commit"
           git push
         env:
