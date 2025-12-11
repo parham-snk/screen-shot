@@ -32,6 +32,8 @@ jobs:
 
       # مرحله ۵: commit و push
       - name: Commit screenshot
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           git config --global  user.name "parham-snk"
           git config --global  user.email "psanjanaki@gmail.com"
@@ -42,5 +44,4 @@ jobs:
           git add .
           git commit -m "Update screenshot" || echo "No changes to commit"
           git push https://github.com/parham-snk/screen-shot main
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        
