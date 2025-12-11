@@ -35,7 +35,7 @@ jobs:
         run: |
           git config --global  user.name "parham-snk"
           git config --global  user.email "psanjanaki@gmail.com"
-          git stash push 
+          git stash 
           git checkout main 
           git stash apply
           git add .
