@@ -4,7 +4,9 @@ on:
   push:
     branches:
       - master
-
+permissions:
+  contents: write
+  
 jobs:
   screenshot:
     runs-on: ubuntu-latest
@@ -32,11 +34,12 @@ jobs:
 
       # مرحله ۵: commit و push
       - name: Commit screenshot
-        run: git add . 
+        run: | 
+          git add .
+          git commit -m s
       - name : push to github
         uses: ad-m/github-push-action@v0.6.0
         with:
           branch: main
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          commit_message: "Update build"  
         
