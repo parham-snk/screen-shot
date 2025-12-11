@@ -39,7 +39,7 @@ jobs:
           git config --global user.email "psanjanaki@gmail.com"
           git checkout main || git checkout -b main
           git reset --hard master
-          git add screenshot/screenshot.jpg README.md
+          git add screenshot/screenshot.jpg 
           git commit -m "Update screenshot [skip ci]"
           git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/parham-snk/screen-shot.git HEAD:main
         
