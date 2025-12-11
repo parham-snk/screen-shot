@@ -30,4 +30,4 @@ jobs :
     needs : screenshot
     runs-on: ubuntu-latest
     steps:
-      - run : git config --global user.name parham-snk;git config --global user.email psanjanaki@gmail.com ; git checkout main ;  git add ./screenshot/screenshot.jpg ; git commit -m "new" ; git push https://github.com/parham-snk main 
+      - run : git config --global user.name parham-snk;git config --global user.email psanjanaki@gmail.com ; git checkout main ;  git add ./screenshot/screenshot.jpg ; git commit -m "new" ; git push https://github.com/parham-snk/screen-shot main 
