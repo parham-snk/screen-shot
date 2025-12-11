@@ -38,9 +38,8 @@ jobs:
           git config --global user.name "parham-snk"
           git config --global user.email "psanjanaki@gmail.com"
           git checkout main || git checkout -b main
-          git merge master --allow-unrelated-histories -m "Merge master into main for screenshot"
+          git reset --hard master
           git add screenshot/screenshot.jpg README.md
-          git commit -m "Update screenshot [skip ci]" || echo "No changes to commit"
+          git commit -m "Update screenshot [skip ci]"
           git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/parham-snk/screen-shot.git HEAD:main
-
         
