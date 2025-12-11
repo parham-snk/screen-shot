@@ -35,6 +35,8 @@ jobs:
       # مرحله ۵: commit و push
       - name: Commit screenshot
         run: | 
+          git config --global user.name "parham-snk"
+          git config --global user.email "psanjanaki@gmail.com"
           git add .
           git commit -m s
       - name : push to github
