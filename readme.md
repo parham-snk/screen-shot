@@ -1,1 +1,1 @@
-![view](./scr.jpg)
+![view](./screenshot/screenshot.jpg)

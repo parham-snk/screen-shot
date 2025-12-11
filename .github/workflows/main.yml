@@ -1,10 +1,10 @@
-- name : screenshot
+name : screenshot
 
-- on:
+on:
   push:
-    branches:[master]
+    branches : master
 
-- jobs : 
+jobs : 
   screenshot : 
     runs-on : ubuntu-latest
     steps:
@@ -25,5 +25,4 @@
         uses : actions/upload-pages-artifact@v3
         with :
           name : screenshot
-          path : screenshot.jpg
-
+          path : ./screenshot
