@@ -33,7 +33,7 @@ jobs:
       # مرحله ۵: commit و push
       - name: Commit screenshot
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name "parham-snk"
           git config --global user.email "psanjanaki@gmail.com"
@@ -41,5 +41,5 @@ jobs:
           git reset --hard master
           git add screenshot/screenshot.jpg 
           git commit -m "Update screenshot [skip ci]"
-          git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/parham-snk/screen-shot.git HEAD:main
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/parham-snk/screen-shot.git HEAD:main
         
