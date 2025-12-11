@@ -30,8 +30,8 @@ jobs:
       # مرحله ۵: commit و push
       - name: Commit screenshot
         run: |
-          git config user.name "parham-snk"
-          git config user.email "psanjanaki@gmail.com"
+          git config --global  user.name "parham-snk"
+          git config --global  user.email "psanjanaki@gmail.com"
           git add ./screenshot/screenshot.jpg
           git checkout min 
           git commit -m "Update screenshot" || echo "No changes to commit"
