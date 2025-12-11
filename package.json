@@ -1,0 +1,24 @@
+{
+  "name": "screenshot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parham-snk/screen-shot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/parham-snk/screen-shot/issues"
+  },
+  "homepage": "https://github.com/parham-snk/screen-shot#readme",
+  "description": "",
+  "dependencies": {
+    "puppeteer": "^24.32.1"
+  }
+}
