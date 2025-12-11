@@ -43,4 +43,4 @@ jobs:
           git commit -m "Update screenshot" || echo "No changes to commit"
           git push https://github.com/parham-snk/screen-shot main
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
