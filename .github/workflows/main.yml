@@ -33,15 +33,14 @@ jobs:
       # مرحله ۵: commit و push
       - name: Commit screenshot
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          git config --global  user.name "parham-snk"
-          git config --global  user.email "psanjanaki@gmail.com"
-          git add .
-          git stash 
-          git checkout main 
-          git stash apply
-          git add .
-          git commit -m "Update screenshot" || echo "No changes to commit"
-          git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/parham-snk/screen-shot main
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git checkout main || git checkout -b main
+          git merge master --allow-unrelated-histories -m "Merge master into main for screenshot"
+          git add screenshot/screenshot.jpg README.md
+          git commit -m "Update screenshot [skip ci]" || echo "No changes to commit"
+          git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/parham-snk/screen-shot.git HEAD:main
+
         
